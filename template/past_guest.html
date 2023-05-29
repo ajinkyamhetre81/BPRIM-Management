@@ -1,0 +1,71 @@
+{% extends 'base_guest.html' %}
+
+{% block title %} past guest {% endblock title %}
+
+{% block body %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 style="text-align: center; background-color: black; color:white;height:15mm;padding-top:1%">Past Guest Records</h3>
+			<form method="post" action="/past_guest">
+				{% csrf_token %}
+				Enter the date :<input type="date" name="srchdate" />
+				<input type="submit" class="btn btn-primary" value="guest_search">
+			</form>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+                        <th scope="col">sr_no</th>
+                        <th scope="col">Registration Number</th>
+                        <th scope="col">First name</th>
+                        <th scope="col">Last name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Mobile Number</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Institute_name</th>
+                        <th scope="col">Permanent Address</th>
+                        {% comment %} <th scope="col">City</th> {% endcomment %}
+                        {% comment %} <th scope="col">State</th> {% endcomment %}
+                        <th scope="col">Pincode</th>
+                        <th scope="col">Workshop</th>
+                        <th scope="col">Purpose</th>
+						<th scope="col">Arrival Date</th>
+						<th scope="col">Leaving Date</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Room no</th>
+					</tr>
+				  </thead>
+				<tbody>
+					{% for ctr in reqdata %}
+					<tr>
+						<td>{{forloop.counter}}</td>
+						<td>{{ctr.reg_number}}</td>
+						<td>{{ctr.f_name}}</td>
+						<td>{{ctr.l_name}}</td>
+						<td>{{ctr.e_mail}}</td>
+						<td>{{ctr.mobile_no}}</td>
+						<td>{{ctr.Gender}}</td>
+						<td>{{ctr.institute_name}}</td>
+						<td>{{ctr.perm_address}}</td>
+						{% comment %} <td>{{ctr.city}}</td> {% endcomment %}
+						{% comment %} <td>{{ctr.state}}</td> {% endcomment %}
+						<td>{{ctr.pinCode}}</td>
+						<td>{{ctr.workshop}}</td>
+                        <td>{{ctr.purpose}}</td>
+						<td>{{ctr.arrival_date}}</td>
+						<td>{{ctr.leaving_date}}</td>
+						<td>{{ctr.duration}}</td>
+						<td>{{ctr.roomno}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<!-- --------------------------------footer----------------------- -->
+
+	<br><br><br><br><br><br><br><br>
+	{% include "./footer_guest.html" %}
+{% endblock body %}

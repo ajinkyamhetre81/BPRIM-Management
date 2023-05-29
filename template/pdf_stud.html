@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{k.fname}}</title>
+
+    <style>
+        #fd1
+        {
+            width: 30cm;
+            text-align: left;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <fieldset id="fd1">
+            <center><h1>BHASKARACHARYA PRATISHTHANA <br> HOSTEL ADMISSION FORM</h1></center>
+            
+                <p>DATE:</p>
+                 <p>To, <br>the Custodian
+                <br> Bhaskaracharya Pratishthana,
+                <br>56/14, Erandawane, Damle Path,
+                <br>Pune – 411 004.</p>
+
+            <p>
+                Sir,
+                <br> I, the undersinged, request you to admit me to the hostel of Bhaskaracharya Pratishthana for the 
+                <br> academic year {{k.arrival_year}} - {{k.leaving_year}} I have read the concerned rules and regulations and I am 
+                <br> bound to obey them.
+            </p>   
+            
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><u>{{k.fname}} {{k.mname}} {{k.lname}}</u></td>
+                </tr>
+                <tr>
+                    <td>Father's Name:</td>
+                    <td><u>{{k.mname}} {{k.lname}}</u></td>
+                </tr>
+                <tr>
+                    <td>Father's Occupation:</td>
+                    <td><u>{{k.father_occupation}}</u></td>
+                </tr>
+                <tr>
+                    <td>Permanent Address</td>
+                    <td><u>{{k.Address}} , {{k.City}} , {{k.State}} , {{k.PinCode}}</u></td>
+                </tr>
+                <tr>
+                    <td>Name of the Local Guardian:</td>
+                    <td><u>{{k.locl_grd}}</u></td>
+                </tr>
+                <tr>
+                    <td>Address of the Local Guardian:</td>
+                    <td><u>{{k.locl_grd_add}}</u></td>
+                </tr>
+                <tr>
+                    <td>Name and address of the Institute
+                        <br>where he is a student presently
+                    </td>
+                    <td><u>{{k.Institute}}</u></td>
+                </tr>
+                <tr>
+                    <td>Academic performance during
+                        <br>last two years</td>
+                    <td>_____________________________________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>Recommendation and signature of
+                        <br> the local guardian</td>
+                        <td>_____________________________________________________
+                            _____________________________________________________
+                        </td>
+                    </tr>
+                    <tr style="height: 3cm;">
+                        <td>Place:__________________</td>
+                        <td style="text-align: right;">Signature of the Student</td>
+                    </tr>
+                    
+                    
+            </table>
+            <hr style="border: dashed;">
+            <center><p style="font-size: xx-large;">(FOR OFFICE USE ONLY)</p></center>
+            <div class="container-fluid">
+            <p>
+                Admission or not : ___________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date : __________________________
+                <br> Admission No. : _____________ &nbsp;&nbsp;&nbsp;&nbsp; Room No.: _____________ &nbsp;&nbsp;&nbsp;&nbsp; Cot No.: _________________
+                <br> Keys issued on: ______________ &nbsp;&nbsp;&nbsp;&nbsp; Signature of the student : _____________________________
+                <br> Keys taken back on : ____________________</p>
+            </div>
+            <br>
+
+            <p style="text-align: right;">Signature of Bhaskaracharya Pratishthana
+                <br> Authority</p>
+            
+            <center><h4>HOSTEL AGREEMENT</h4></center>
+
+            <p>
+                Date :
+                <br><br>
+                To,
+                <br> The Custodian
+                <br> Bhaskaracharya Pratishthana,
+                <br> 56/14, Erandawane, Damle Path,
+                <br> Pune - 411 004.
+                <br><br> Sir,
+                <br> I, Mr/Mrs/Ms <u> {{k.fname}} {{k.mname}} {{k.lname}}</u> hereby 
+                undertake to pay <br> Rs. _______________/- as fees for the accommodation for the said 
+                academic year 20 - 20 and a deposit of <br> Rs. _____________/- with the Bhaskaracharya 
+                Pratishthana to be returned on vacation of the hostel accommodation provided to me at the 
+                conclusion of the academic year 20 - 20 . I also hereby undertake to be bound by the 
+                following rules and to forfeit the accommodation provided to me forthwith as well as the 
+                deposit in case of breach of any one or more of the following rules.
+                <br>
+                <ol type="1">
+                <li>The Supervision and control of students residing in the hostel shall be in the hand of the
+                Custodian</li>
+                <li>If a student, for any reason, appears to the Custodian, to be undersirable as a resident
+                student in the hostel, he will have full power to expel such a student from the hostel and 
+                he will not be bound to give reasons for any such action taken.</li>
+                <li>Hostel student should not make any type of noise, quarrel and any other act, which
+                management may find unsuitable, in the whole premises of Bhaskaracharya Pratishthana
+                and the students must use the premises allotted to them only for purposes of residence and
+                study.</li>
+                <li>In case of over-riding needs of the Pratishthana accommodation allotted to students is
+                liable to be curtailed or modified. However care will be taken in such cases to see that
+                inconvenience caused to the students in minimized. Notice period will be maximum 15
+                days.</li>
+               <li>No student shall undertake on his own to repair any damage to rooms, fittings fixtures or
+                furniture. He should report to the Custodian who will then arrange to have the repairs
+                carried out and student is bound to pay the amount caused by any damage of furniture and
+                electricity fittings in the premises allotted to him.</li>
+                <li>All letters etc. Addressed to hostel students through the post office, will in the first
+                instance be delivered to the Custodian who will make proper arrangements for delivering
+                the same to the students concerned. The Custodian may open any letter he thinks he ought
+                to open.</li>
+                <li>Every matter not provided for in these rules will rest at the absolute discretion of the
+                Custodian.</li>
+
+                <!-- <br><br><br><br><br><br><br><br><br><br> -->
+                <br><br><br><br><br><br><br><br><br>
+                <center><h4>UNDERTAKING</h4></center>
+                
+                <li>(A) I shall not allow any person other than myself to use the accommodation
+                provided to me, and shall take the written prior permission of the custodian for
+                allowing guests to so use the accommodation subject to such conditions as the
+                custodian my impose.</li>
+                (B) I undertake not to entertain any female/relative/friend in the hostel premises.
+                <li>I shall not cook any thing in the hostel premises nor I will use heating elements or
+                may type of cassette tape recorder, Radio, Transistor Record player and any other
+                sound system for any purpose. I shall not use any electrical appliances.</li>
+                <li>The Electricity bills shall be divided equally amongst the inmates during that
+                period.</li>
+                <li>I will not keep any kind of luggage in the premises of the hostel while leaving the
+                hostel and I am bound to return the key of premises to custodian at the time of
+                leaving the hostel premises. Pratishthana is not responsible for keeping luggage
+                here in vacation period.</li>
+
+                </ol>
+
+                I have read all the rules and regulations of Bhaskaracharya Pratishthana and I agree to 
+                stay in the hostel of Bhaskaracharya Pratishthana as per the rules and regulations.
+                <br><br> Thanking you,
+                <br><br><br> <p style="text-align: right;">Yours Faithfully</p> 
+                <br> Encl.: 1. Certified xerox copy of Identity-Card
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. Meeting with local guardian and he should sign the form before-office clerk.
+
+                <center><h4>FOR THE HOSTEL STUDENTS</h4></center>
+                <ol type="1">
+                    <li> student should utilize the locks provided by pratishthana.</li>
+                    <li>While leaving the room all the furniture and fixture and electric fittings etc. Must
+                    be well in order.</li>
+                    <li>No luggage of any kind is permitted to be left behind in the premises of the hostel
+                    while leaving the hostel. The hostel is not responsible for such luggage.</li>
+                    <li> fees for the hostel during the academic year 20 &nbsp;&nbsp; - 20 &nbsp;&nbsp; will be
+                    <br> Rs. _____________ /-
+                    <br>Rs. _____________/- First term (__________ to __________ months)
+                    <br>Rs. _____________/- Second term (__________ to __________ months).</li>
+                    <li>Student is required to deposit Rs. __________ While joining the hostel, which will be
+                    reimbursed while leaving hostel only if
+                    <ol type="1">
+                        <li> he use the hostel facilites in neat order.</li>
+                        <li> he behaves properly obeying the rules and regulation of the hostel.</li>
+                    </ol>
+                    <li>Hostel fees will be accepted in one installment for the term at the beginning of the
+                    term.</li>
+                    <li>Room walls and also room doors do not paste anything like posters – photos or any
+                    printed material. A breach of this rule will entail a fine of Rs. 500/- or dismissed
+                    from the hostel</li>
+                </ol>
+            </p>
+        </fieldset>
+    </center>
+</body>
+</html>

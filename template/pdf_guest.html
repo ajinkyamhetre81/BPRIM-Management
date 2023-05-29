@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{m.f_name}} form</title>
+
+    <style>
+        #fd1
+        {
+            width: 30cm;
+            text-align: left;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <fieldset id="fd1">
+            <center><h1>BHASKARACHARYA PRATISHTHANA <br>Guest Visitor's Form</h1></center>
+            
+                <p>DATE:</p>
+            <br>
+            <p>To, <br>the Custodian
+                <br> Bhaskaracharya Pratishthana,
+                <br>56/14, Erandawane, Damle Path,
+                <br>Pune – 411 004.</p>
+
+            <p>
+                Sir,
+                <br>I, the undersigned, request you to admit me to the Bhaskaracharya Pratishthana for the Workshop / 
+                <br> Exam etc. 
+            </p>   
+
+            <table>
+                <tr>
+                    <td>Name of Workshop : </td>
+                    <td>__<u>{{m.workshop}}</u>__</td>
+                </tr>
+                <tr>
+                    <td>Name and Address of Institute/College : </td>
+                    <td>__<u>{{m.institute_name}}</u>__</td>
+                </tr>
+                <tr>
+                    <td>Name of Guest : </td>
+                    <td>__<u>{{m.f_name}}  {{m.l_name}}</u>__</td>
+                </tr>
+                <tr>
+                    <td>Permanent Address : </td>
+                    <td><u>{{m.perm_address}} {{m.city}} {{m.state}} {{m.pinCode}}</u></td>
+                </tr>
+                <tr>
+                    <td>Phone : </td>
+                    <td><u></u></td>
+                </tr>
+                <tr>
+                    <td>Mobile number : </td>
+                    <td><u>{{m.mobile_no}}</u></td>
+                </tr>
+                <tr>
+                    <td>Email ID : </td>
+                    <td><u>{{m.e_mail}}</u></td>
+                </tr>
+                <tr>
+                    <td>Duration of Visit: </td>
+                    <td>From <u>{{m.arrival_date}}</u> To <u>{{m.leaving_date}}</u></td>
+                </tr>
+                <tr>
+                    <td>Purpose of Visit : </td>
+                    <td><u>{{m.purpose}}</u></td>
+                </tr>
+                <tr>
+                    <td>Recommendation of Teacher / Trustee From 
+                        <br> Bhaskaracharya Pratishthana : </td>
+                    <td>_____________________________________________________</td>
+                </tr>
+                <tr>
+                    <td>Facility Required : 
+                        <ol type="1">
+                            <li> Library : Yes / No </li>
+                            <li> Computer : Yes / No</li> 
+                            <li> Guest House : Yes / No</li>
+                        </ol>
+                        </td>
+                </tr>
+                <tr style="height: 1cm;">
+                    <td>Date :</td>
+                </tr>
+                <tr style="height: 4cm;">
+                    <td>Signature of Director </td>
+                    <td style="text-align: right;">Signature of Visitor </td>
+                </tr>
+            </table>
+
+            <p>Encl : 
+                <ol>
+                    <li> Certified xerox copy of Identity-card (College/Institute) </li>
+                    <li> Xerox copy of permanent address proof. </li>
+                    <li> Recommended Email-copy for accomodation from respective Teacher</li>
+                </ol>
+            </p>
+        </fieldset>
+           
+    </center>
+    
+</body>
+</html>

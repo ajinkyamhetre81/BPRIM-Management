@@ -1,0 +1,171 @@
+{% extends 'base_guest.html' %}
+{%block body%}
+<html>
+<head>
+<style>
+   
+h2{
+ font-family: Sans-serif; 
+ font-size: 24px;     
+ font-style: normal; 
+ font-weight: bold; 
+ color: Red;
+ text-align: center; 
+ text-decoration: underline
+}
+table{
+ font-family: verdana; 
+ color:rgb(8, 8, 8); 
+ font-size: 16px; 
+ font-style: normal;
+ font-weight: bold;
+}
+table.inner{
+ border: 10px
+}
+input[type=text], input[type=email], input[type=number]{
+ width: 50%;
+ padding: 6px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+input[type=submit], input[type=reset]{
+ width: 15%;
+ padding: 8px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+body{
+    background-image: url('static/4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+</style>
+</head>
+<body>
+    insert data
+    <form method="post" action="/register_guest">
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            Room {{rno}} is Full
+        </div>
+        {% endif %}
+        {% csrf_token %}
+        <h1 style="color:gray;"> Visitor's Registration Form </h1>
+            <table align="right" cellpadding = "10">
+                {% comment %} Registration ID {% endcomment %}
+                <tr>
+                <td>Registration ID</td>
+                <td>
+                <input type="data" name="reg_number" value="{{regno}}" readonly/>
+                </td>
+                </tr>
+                {% comment %} First Name {% endcomment %}
+                <tr>
+                <td>First Name</td>
+                <td><input type="text" name="FirstName" maxlength="50" placeholder="ex: Ghanendra" />
+                (Max 50 Characters Allowed)
+                </td>
+                </tr>
+                {% comment %} Last Name {% endcomment %}
+                <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="LastName" maxlength="50" placeholder="ex: Yadav"/>
+                (Max 50 Characters Allowed)
+                </td>
+                </tr>
+                {% comment %} Email ID {% endcomment %}
+                <tr>
+                <td>Email ID</td>
+                <td><input type="email" name="EmailID" maxlength="100" placeholder="ex: yghanendra@gmail.com"/></td>
+                </tr>
+                {% comment %} Mobile Number {% endcomment %}
+                <tr>
+                <td>Mobile Number</td>
+                <td>
+                <input type="number" name="MobileNumber" maxlength="10" placeholder="ex: 7842xxxxxx"/>
+                (10 Digits Allowed)
+                </td>
+                </tr>
+                {% comment %} Gender {% endcomment %}
+                <tr>
+                <td>Gender</td>
+                <td>
+                <input type="radio" name="Gender" value="M" />
+                Male
+                <input type="radio" name="Gender" value="F" />
+                Female
+                </td>
+                </tr>
+                {% comment %} Institute {% endcomment %}
+                <tr>
+                    <td>Name of Institute</td>
+                    <td><input type="text" name="Institute" maxlength="100" placeholder="ex: IIT BOMBAY"/>
+                    </tr>
+                {% comment %} Address {% endcomment %}
+                <tr>
+                <td>Permanent Address<br /><br /><br /></td>
+                <td><textarea name="Address" rows="5" cols="50"></textarea></td>
+                </tr>
+                {% comment %} City {% endcomment %}
+                <tr>
+                <td>City</td>
+                <td><input type="text" name="City" maxlength="50" placeholder="ex: Mumbai"/>
+                (Max 50 Characters Allowed)
+                </td>
+                </tr>
+                {% comment %} Pin Code {% endcomment %}
+                <tr>
+                <td>Pin Code</td>
+                <td><input type="Number" name="PinCode" maxlength="6" placeholder="ex: 560068"/>
+                (Max 6 Numbers Allowed)
+                </td>
+                </tr>
+                {% comment %} State {% endcomment %}
+                <tr>
+                <td>State</td>
+                <td><input type="text" name="State" maxlength="50" placeholder="ex: Maharashtra"/>
+                (Max 50 Characters Allowed)
+                </td>
+                </tr>
+                {% comment %} Courses {% endcomment %}
+                <tr>
+                <td>Name of<br />workshop</td>
+                <td>
+                <input type="text" name="Workshop" placeholder="ex: AFS"/>
+                </td>
+                </tr>
+                {% comment %} Purpose of visit {% endcomment %}
+                <tr>
+                    <td>Purpose of Visit</td>
+                    <td><input type="text" name="Purpose" maxlength="50" placeholder="ex: Academics"/>
+                    (Max 50 Characters Allowed)
+                    </td>
+                </tr>
+                {% comment %} Duration of Visit {% endcomment %}
+                <tr>
+                    <td>Duration of Visit</td>
+                    <td>From <input type="date" name="arrival_date"/> to <input type="date" name="leaving_date"/>
+                    </td>
+                </tr>
+                {% comment %} Room Number {% endcomment %}
+                <tr>
+                <td>Room Number</td>
+                <td>
+                <input type="text" name="room_no" placeholder="Room Number"/>
+                </td>
+                </tr>
+                {% comment %} Submit and Reset {% endcomment %}
+                <tr>
+                <td colspan="2" align="center">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+
+{% endblock body %}

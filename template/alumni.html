@@ -1,0 +1,75 @@
+{% extends 'base_hostel.html' %}
+
+{% block title %} alumni {% endblock title %}
+
+{% block body %}
+
+<link rel="stylesheet" href="/static/files/css/hostel.css">
+
+<h3 style="text-align: center; background-color: black; color:white;height:15mm;padding-top:1%">Alumni Records</h3>
+
+<div class="container-fluid">
+	<form method="post" action="/alumni">
+		{% csrf_token %}
+		Enter the year : <input type="number" name="alsrchyr" min="1900" max="2400"/>
+		<input type="submit" class="btn btn-primary" value="search">
+	</form>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+					  <th scope="col">sr_no</th>
+					  <th scope="col">reg_id</th>
+					  <th scope="col">fname</th>
+					  <!-- <th scope="col">mname</th> -->
+					  <th scope="col">lname</th>
+					  <th scope="col">email</th>
+					  <th scope="col">Mobile Number</th>
+					  <!-- <th scope="col">gender</th> -->
+					  <!-- <th scope="col">Birthdate</th> -->
+					  <!-- <th scope="col">Address</th> -->
+					  {% comment %} <th scope="col">City</th> {% endcomment %}
+					  {% comment %} <th scope="col">State</th> {% endcomment %}
+					  <!-- <th scope="col">Pincode</th> -->
+					  <th scope="col">Qualification</th>
+					  <th scope="col">Course</th>
+					  <th scope="col">Academic Year</th>
+					  <!-- <th scope="col">Duration<br>(in years)</th> -->
+					  <th scope="col">room_no</th>
+					</tr>
+				  </thead>
+				<tbody>
+					{% for ctr in info %}
+					<tr>
+						<td>{{forloop.counter}}</td>
+						<td>{{ctr.reg_id}}</td>
+						<td>{{ctr.fname}}</td>
+						<!-- <td>{{ctr.mname}}</td> -->
+						<td>{{ctr.lname}}</td>
+						<td>{{ctr.email}}</td>
+						<td>{{ctr.mobile_number}}</td>
+						<!-- <td>{{ctr.gender}}</td> -->
+						<!-- <td>{{ctr.Bdate}}</td> -->
+						<!-- <td>{{ctr.Address}}</td> -->
+						{% comment %} <td>{{ctr.City}}</td> {% endcomment %}
+						{% comment %} <td>{{ctr.State}}</td> {% endcomment %}
+						<!-- <td>{{ctr.PinCode}}</td> -->
+						<td>{{ctr.Qualification}}</td>
+						<td>{{ctr.Course}}</td>
+						<td>{{ctr.arrival_year}} - {{ctr.leaving_year}}</td>
+						<!-- <td>{{ctr.Duration}}</td> -->
+						<td>{{ctr.room_no}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+
+ 
+{% include "./footer.html" %}
+
+{% endblock body %}

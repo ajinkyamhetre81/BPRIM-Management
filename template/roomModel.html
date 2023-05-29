@@ -1,0 +1,24 @@
+
+
+{% extends 'base_hostel.html' %}
+
+{% block title %}Hostel{% endblock title %}
+
+{% block body %} 
+
+{% for k in stud %}
+
+<div class="maincontainer" style="padding-top: 5cm; ">
+    <div class="back">
+      <div class="p-2 mb-1 bg-secondary text-white">
+        <h3>Student Count: {{stctrk}}</h3>
+      </div>
+        <div class="btn-group">
+          <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_student/H5">open</a>
+        </div>
+    </div>
+    <div class="front">
+        <h1>Hk</h1>
+    </div>
+  </div>
+</div>

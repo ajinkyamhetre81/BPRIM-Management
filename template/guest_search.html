@@ -1,0 +1,60 @@
+{% extends 'base_guest.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Sr_No</th>
+            <th scope="col">Registration Number</th>            
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile Number</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Institute_name</th>
+            <th scope="col">Permanent Address</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Workshop</th>
+            <th scope="col">Purpose</th>
+            <th scope="col">Arrival Date</th>
+            <th scope="col">Leaving Date</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Room no</th>
+          </tr>
+        </thead>
+        {% for m in gstdata %}
+
+        <tbody>
+          <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{m.reg_number}}</td>
+            <td>{{m.f_name}}</td>
+            <td>{{m.l_name}}</td>
+            <td>{{m.e_mail}}</td>
+            <td>{{m.mobile_no}}</td>
+            <td>{{m.Gender}}</td>
+            <td>{{m.institute_name}}</td>
+            <td>{{m.perm_address}}</td>
+            <td>{{m.city}}</td>
+            <td>{{m.state}}</td>
+            <td>{{m.pinCode}}</td>
+            <td>{{m.workshop}}</td>
+            <td>{{m.purpose}}</td>
+            <td>{{m.arrival_date}}</td>
+            <td>{{m.leaving_date}}</td>            
+            <td>{{m.duration}}</td>
+            <td>{{m.roomno}}</td> 
+          </tr>
+        
+        </tbody>
+        {% endfor %}
+      </table>
+</div>
+
+{% endblock body %}
+

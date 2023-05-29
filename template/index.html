@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+<center>
+<div class="mx-auto" style="width: 1000px;">
+   <style>
+        body {
+          /* background-image: url('static/a.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed; */
+          background-size: 100% 100%;
+          background-color: rgb(239, 235, 235);
+        }
+
+        .cards-list {
+          z-index: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+        }
+
+        .card {
+          margin: 30px auto;
+          width: 300px;
+          height: 300px;
+          border-radius: 40px;
+          box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+          cursor: pointer;
+          transition: 0.4s;
+        }
+
+        .card .card_image {
+          width: inherit;
+          height: inherit;
+          border-radius: 40px;
+          background-color: #0A0A2A;
+        }
+
+        .card .card_image img {
+          width: inherit;
+          height: inherit;
+          border-radius: 40px;
+          object-fit: cover;
+        }
+
+        .card .card_title {
+          text-align: center;
+          border-radius: 0px 0px 40px 40px;
+          font-family: sans-serif;
+          font-weight: bold;
+          font-size: 30px;
+          margin-top: -80px;
+          height: 40px;
+        }
+
+        .card:hover {
+          transform: scale(0.9, 0.9);
+          box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+            -5px -5px 30px 15px rgba(0,0,0,0.22);
+        }
+
+        .title-white {
+          color: white;
+        }
+
+        .title-black {
+          color: black;
+        }
+
+        @media all and (max-width: 500px) {
+          .card-list {
+            /* On small screens, we are no longer using row direction but column */
+            flex-direction: column;
+          }
+        }
+
+        </style> 
+  </div>
+
+      <div class="cards-list ">
+        <a href="/hostel">
+          <div class="card 1" >
+            <div class="card_image" > 
+            
+              <!-- <img src="https://i.redd.it/b3esnz5ra34y.jpg" />  -->
+            </div>
+            <div class="card_title title-white" >
+              <h1><strong>Hostel</strong></h1>
+              <!-- <a href="/hostel">Hostel</a> -->
+            </div>
+          </div>
+        </a>
+
+        <a href="/guest_house">
+          <div class="card 2">
+            <div class="card_image"> 
+              <!-- <img src="https://i.redd.it/b3esnz5ra34y.jpg" />  -->
+            </div>
+            <div class="card_title title-white">
+              <h1><strong>Guest House</strong></h1>
+            </div>
+          </div>
+        </a>
+      </div>
+      <br><br><br><br><br><br><br>
+     
+</center>
+{% include "./footer.html" %}
+
+{% endblock body %}
+

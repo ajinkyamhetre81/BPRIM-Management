@@ -1,0 +1,169 @@
+{% extends 'base_guest.html' %}
+
+{% block title %}Guest{% endblock title %}
+
+ {% block body %}
+ {% comment %} <center><h2> BPRIM Guest Rooms Management System </h2></center> {% endcomment %}
+ <center><font face = "Times New Roman" size = "10" color="black">BPRIM Guest Rooms Management System</font></center>
+ <div class="container my-5">
+     <style>
+         .maincontainer
+            {
+                width: 300px;
+                height: 200px;
+                margin-left:  80px;
+                float: left; /* stack each div horizontally */
+            }
+
+            
+            .front h1
+            {
+                position:absolute;
+                color: #ffffff;
+                font-weight: bolder;
+                padding-left: 3cm;
+                padding-top: 2cm;
+
+            }
+
+            /* style the maincontainer class with all child div's of class .front */
+           
+            .maincontainer > .front
+            {
+                position: absolute;
+                transform: perspective(600px) rotateY(0deg);
+                
+                width: 300px;
+                height: 200px;
+                
+                backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+                transition: transform .5s linear 0s;
+
+                background-color:currentColor;
+                border-radius: 10px;          
+            }
+
+            /* style the maincontainer class with all child div's of class .back */
+           
+            .maincontainer > .back
+            {
+                position: absolute;
+                transform: perspective(600px) rotateY(180deg);
+                background: #262626;
+                color: #fff;
+                width: 300px;
+                height: 200px;
+                border-radius: 10px;
+                padding: 5px;
+                backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+                transition: transform .5s linear 0s;
+            }
+           
+            .maincontainer:hover > .front
+            {
+                transform: perspective(600px) rotateY(-180deg);
+            }
+
+            .maincontainer:hover > .back
+            {
+                transform: perspective(600px) rotateY(0deg);
+            }
+            .btn-group
+            {
+              padding-top: 2cm;
+              padding-left: 5cm;
+              font-size: xx-large;
+            }  
+         </style>
+         
+         <div class="maincontainer">
+          <div class="back">
+            <div class="p-2 mb-1 bg-secondary text-white">
+              <h3>Guest Count: {{gstctr1}}</h3>
+            </div>
+              <div class="btn-group">
+                <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_guest/G1">open</a>
+              </div>
+          </div>
+          <div class="front" >
+              <h1>G1</h1>
+          </div>
+      </div>
+
+      <div class="maincontainer">
+        <div class="back">
+          <div class="p-2 mb-1 bg-secondary text-white">
+            <h3>Guest Count: {{gstctr2}}</h3>
+          </div>
+            <div class="btn-group">
+              <a type="button" class="btn btn-sm btn-outline-info"  style="width: 2cm;height: 1cm; font-size:large;" href="/open_guest/G2">open</a>
+            </div>
+            <p></p>
+        </div>
+        <div class="front">
+            <h1>G2</h1>
+        </div>
+    </div>
+ </div>
+
+    <div class="maincontainer">
+      <div class="back">
+        <div class="p-2 mb-1 bg-secondary text-white">
+          <h3>Guest Count: {{gstctr3}}</h3>
+        </div>
+          <div class="btn-group">
+            <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_guest/G3">open</a>
+          </div>
+      </div>
+      <div class="front">
+          <h1>G3</h1>
+      </div>
+    </div>
+ 
+   
+    <div class="maincontainer" style="margin-top: 2cm;">
+      <div class="back">
+        <div class="p-2 mb-1 bg-secondary text-white">
+          <h3>Guest Count: {{gstctr4}}</h3>
+        </div>
+          <div class="btn-group">
+            <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_guest/G4">open</a>
+          </div>
+      </div>
+      <div class="front">
+          <h1>G4</h1>
+      </div>
+    </div> 
+  
+
+    <div class="maincontainer" style="margin-top: 2cm;">
+      <div class="back">
+        <div class="p-2 mb-1 bg-secondary text-white">
+          <h3>Guest Count: {{gstctr5}}</h3>
+        </div>
+          <div class="btn-group">
+            <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_guest/H5">open</a>
+          </div>
+      </div>
+      <div class="front">
+          <h1>G5</h1>
+      </div>
+    </div>
+
+    <div class="maincontainer" style="margin-top: 2cm;">
+      <div class="back">
+        <!-- <div class="p-2 mb-1 bg-secondary text-white">
+          <h3>Guest Count</h3>
+        </div> -->
+          <div class="btn-group">
+            <a type="button" class="btn btn-sm btn-outline-info" style="margin-top: 1.5cm; width: 2cm;height: 1cm; font-size:large;" href="/register_kits">open</a>
+          </div>
+      </div>
+      <div class="front">
+          <h1 style=" padding-left: 1cm; padding-top: 1cm;">Hospitality Kit</h1>
+      </div>
+    </div>
+   
+ 
+     
+ {% endblock body %}

@@ -1,0 +1,54 @@
+{% extends 'base_guest.html' %}
+
+{% block title %}Display Guests{% endblock title %}
+
+{% block body %}
+<h1>Guest Data of room {{room}}</h1>
+
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">f_name</th>
+            <th scope="col">l_name</th>
+            <th scope="col">e_mail</th>
+            <th scope="col">Mobile Number</th>
+            <th scope="col">Gender</th>
+            <th scope="col">institute_name</th>
+            <th scope="col">perm_address</th>
+            <th scope="col">city</th>
+            <th scope="col">state</th>
+            <th scope="col">pincode</th>
+            <th scope="col">workshop</th>
+            <th scope="col">purpose</th>
+            <th scope="col">duration(in days)</th>
+            <th scope="col">roomno</th>
+          </tr>
+        </thead>
+        {% for ctr1 in newdata %}
+
+        <tbody>
+          <tr>
+            <td>{{ctr1.id}}</td>
+            <td>{{ctr1.f_name}}</td>
+            <td>{{ctr1.l_name}}</td>
+            <td>{{ctr1.e_mail}}</td>
+            <td>{{ctr1.mobile_no}}</td>
+            <td>{{ctr1.Gender}}</td>
+            <td>{{ctr1.institute_name}}</td>
+            <td>{{ctr1.perm_address}}</td>
+            <td>{{ctr1.city}}</td>
+            <td>{{ctr1.state}}</td>
+            <td>{{ctr1.pinCode}}</td>
+            <td>{{ctr1.workshop}}</td>
+            <td>{{ctr1.purpose}}</td>
+            <td>{{ctr1.duration}}</td>
+            <td>{{ctr1.roomno}}</td>
+          </tr>
+        
+        </tbody>
+        {% endfor %}
+      </table>
+{% endblock body %}
+

@@ -1,0 +1,241 @@
+{% extends 'base_hostel.html' %}
+
+{% block title %}Hostel{% endblock title %}
+
+{% block body %} 
+<center><font face = "Times New Roman" size = "10" color="black" >BPRIM Hostel Rooms</font></center>
+<div class="container my-5">
+    <style>
+
+            @media screen and (max-width:small){
+              .maincontainer{
+                margin-right: initial;
+                padding-top: initial;
+                margin-left: initial;
+              }
+            }
+            .maincontainer
+            {
+                width: 300px;
+                height: 200px;
+                /* margin-left: 2cm; */
+                margin-right: 2cm;
+                margin-top: 2cm;
+                float: left; /* stack each div horizontally */
+            }
+
+            
+            .front h1
+            {
+                position:absolute;
+                color: #ffffff;
+                font-weight: bolder;
+                padding-left: 3cm;
+                padding-top: 2cm;
+
+            }
+
+            /* style the maincontainer class with all child div's of class .front */
+            .maincontainer > .front
+            {
+                position: absolute;
+                transform: perspective(600px) rotateY(0deg);
+                
+                width: 300px;
+                height: 200px;
+                
+                backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+                transition: transform .5s linear 0s;
+
+                background-color:royalblue;
+                border-radius: 10px;
+
+                
+            }
+
+            /* style the maincontainer class with all child div's of class .back */
+            .maincontainer > .back
+            {
+                position: absolute;
+                transform: perspective(600px) rotateY(180deg);
+                background: #262626;
+                color: #fff;
+                width: 300px;
+                height: 200px;
+                border-radius: 10px;
+                padding: 5px;
+                backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+                transition: transform .5s linear 0s;
+            }
+
+            .maincontainer:hover > .front
+            {
+                transform: perspective(600px) rotateY(-180deg);
+            }
+
+            .maincontainer:hover > .back
+            {
+                transform: perspective(600px) rotateY(0deg);
+            }
+            .btn-group
+            {
+              padding-top: 2cm;
+              padding-left: 5cm;
+              font-size: xx-large;
+            }
+            
+        </style>
+        
+        <div class="maincontainer">
+          <div class="back">
+            <div class="p-2 mb-1 bg-secondary text-white">
+              <h3>Student Count: {{stctr1}}</h3>
+            </div>
+ 
+              <div class="btn-group">
+                <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_student/H1">open</a>
+              </div>
+          </div>
+          <div class="front" >
+              <h1>H1</h1>
+          </div>
+        </div>
+
+      <div class="maincontainer">
+        <div class="back">
+          <div class="p-2 mb-1 bg-secondary text-white">
+            <h3>Student Count: {{stctr2}}</h3>
+          </div>
+            <div class="btn-group">
+              <a type="button" class="btn btn-sm btn-outline-info"  style="width: 2cm;height: 1cm; font-size:large;" href="/open_student/H2">open</a>
+            </div>
+            <p></p>
+        </div>
+        <div class="front">
+            <h1>H2</h1>
+        </div>
+    </div>
+
+    <div class="maincontainer">
+      <div class="back">
+        <div class="p-2 mb-1 bg-secondary text-white">
+          <h3>Student Count: {{stctr3}}</h3>
+        </div>
+          <div class="btn-group">
+            <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_student/H4">open</a>
+          </div>
+      </div>
+      <div class="front">
+          <h1>H3</h1>
+      </div>
+    </div> 
+  
+   
+    <div class="maincontainer">
+        <div class="back">
+        <div class="p-2 mb-1 bg-secondary text-white">
+          <h3>Student Count: {{stctr4}}</h3>
+        </div>
+          <div class="btn-group">
+            <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_student/H4">open</a>
+          </div>
+      </div>
+      <div class="front">
+          <h1>H4</h1>
+      </div>
+    </div> 
+  
+
+    <div class="maincontainer">
+      <div class="back">
+        <div class="p-2 mb-1 bg-secondary text-white">
+          <h3>Student Count: {{stctr5}}</h3>
+        </div>
+          <div class="btn-group">
+            <a type="button" class="btn btn-sm btn-outline-info" style="width: 2cm;height: 1cm; font-size:large;" href="/open_student/H5">open</a>
+          </div>
+      </div>
+      <div class="front">
+          <h1>H5</h1>
+      </div>
+    </div>
+  </div>
+
+   <div>
+    <a type="button" class="btn btn-primary" href="/addRoomModel" role="button">Add +</a>
+  </div>
+
+  &nbsp;&nbsp;
+
+   <div style="margin-left: 15;">
+    <ol class="list-group list-group-numbered" style="width:50mm; padding: right 30px;">
+      <li class="list-group-item">              
+        <a class="btn btn-link" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample" style="-webkit-text-fill-color: rgb(45, 199, 199);">Students Count</a>
+      </li>
+      <li class="list-group-item">             
+        <a class="btn btn-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="-webkit-text-fill-color: rgb(78, 185, 185);">Alumni Count</a>
+      </li>
+    </ol>
+  </div>
+  <!-----------------------OffCanvas (Alumni)--------------------------------->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+       <table class="table">
+      <thead>
+        <tr>
+        <th scope="col" class="table-dark text-center">Alumni RECORDS</th>
+        </tr>
+        <tbody>
+        <tr>
+          <th scope="row"> Total Alumni ->{{alumni_count}}  </th>
+        </tr>
+        </thead>
+      </tbody>
+      </table>
+      <div class="h4 pb-2 mb-4 text-danger">
+      Total Alumni  -> {{alumni_count}}
+      </div>
+    </div>
+    </div>
+    <!--------------------------- (Offcanvas)--------------------------->	
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel1">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel1"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+           <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="table-dark text-center">STUDENTS RECORDS</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <th scope="row">Number of Students in H1 ->{{stud_h1}}  </th>
+                </tr>
+                <tr>
+                  <th scope="row"class="table-secondary">Number of Students in H2 -> {{stud_h2}}</th>
+                </tr>
+                <tr>
+                    <th scope="row">Number of Students in H3 ->{{stud_h3}}</th>
+                </tr>
+                <tr>
+                  <th scope="row"class="table-secondary">Number of Students in H4 -> {{stud_h4}}</th>
+                </tr>
+                <tr>
+                  <th scope="row">Number of Students in H5 -> {{stud_h5}}</th>
+                </tr>
+              </thead>
+            </tbody>
+          </table>
+          <div class="h4 pb-2 mb-4 text-danger">
+            Total Students -> {{stud_ctr}}
+          </div>
+        </div>
+      </div>
+
+{% endblock body %}

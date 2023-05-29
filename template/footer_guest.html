@@ -1,0 +1,148 @@
+
+<style>
+    .footer {
+    width: 100%;
+    background-color: black;
+  }
+  .footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .footer .col h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 10px 0;
+    color: #FF0063;
+    text-transform: uppercase;
+  }
+  .footer .col ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .footer .col ul li {
+    color: white;
+    font-size: 12px;
+    padding: 5px 0px;
+  }
+  .address ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+  }
+</style>
+<footer>
+    <div class="footer">
+        <div class="contain">
+        <div class="col">
+            <h2>&nbsp;    Details</h2>
+            <a class="btn btn-link" data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample2" style="-webkit-text-fill-color: azure;">Guest Count</a>
+            <a class="btn btn-link" data-bs-toggle="offcanvas" href="#offcanvasExample3" role="button" aria-controls="offcanvasExample3" style="-webkit-text-fill-color: azure;">Past Count</a>
+            <ul>
+            <a class="btn btn-link" style="-webkit-text-fill-color: azure;"> About us</a>
+            <a  class="btn btn-link" style="-webkit-text-fill-color: azure;">Services</li></a>
+            </ul>
+        </div>
+        <div class="col">
+            <h2>Teams</h2>
+            <ul>
+            <li>Admission Team</li>
+            <li>Finance Team</li>
+            <li>IT Team</li>
+            <li>Library Team</li>
+            </ul>
+        </div>+
+        <div class="col">
+            <h2>Contact</h2>
+            <ul>
+            <li><i class='bx bxs-phone-call' > 020 2543 4547</i></li>
+    
+            <li><i  class='bx bx-envelope'> abc@gmail.com </i></li>
+        </ul>
+        </div>
+        <div class="col address">
+            <h2>Address </h2>
+            <ul>
+          <li>56/14, Off Law College Road, Damle Road, Erandwane, Pune, Maharashtra 411004</li>
+        </ul>
+        <br><br><br>
+        <a target="_blank" href="https://www.linkedin.com/company/bhaskaracharya-pratishthan/about/"><img src="static/LinkedIn.png" alt="" height="35" width="35" ></img></a>
+        <a target="_blank" href="https://twitter.com/bprimpune"><img src="static/twitter.png" alt="" height="35" width="35" ></img></a>
+    </div>
+    </div>
+      <div class="clearfix"></div>
+     </div>
+    </div>
+    </footer>
+   
+  
+<!--------------------------- (Offcanvas)--------------------------->	
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel2"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" style="background-color: rgb(187, 174, 158);">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="table-dark text-center">GUEST RECORDS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">Number of Guests in G1 ->{{guestt_g1}}   </td>
+          </tr>
+          <tr>
+            <td scope="row"class="table-secondary">Number of Guests in G2 -> {{guestt_g2}}</td>
+          </tr>
+          <tr>
+            <td scope="row">Number of Guests in G3-> {{guestt_g3}}</td>
+          </tr>
+          <tr>
+            <td scope="row"class="table-secondary">Number of Guests in G4-> {{guestt_g4}}</td>
+          </tr>
+          <tr>
+            <td scope="row">Number of Guests in G5-> {{guestt_g5}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="h4 pb-2 mb-4 text-danger">
+        Total Guests -> {{guestt_ctr}}
+      </div>
+    </div>
+  </div>
+<!-----------------------OffCanvas (Alumni)--------------------------------->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel3">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel3"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+	<div class="offcanvas-body" style="background-color: rgb(187, 174, 158);">
+	   <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class="table-dark text-center">Alumni RECORDS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+			    <td scope="row"> Past guest Count  -> {{guest_count}} </td>
+			  </tr>
+        </tbody>	
+	    </table>
+	  <div class="h4 pb-2 mb-4 text-danger">
+		Total Guest  -> {{guest_count}}
+	  </div>
+	</div>
+</div>
+{% block body %} {% endblock body %} 
+</body>
+
+</html>
+
+
+

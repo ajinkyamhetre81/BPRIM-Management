@@ -1,0 +1,97 @@
+a.button1
+{
+    display:inline-block;
+    padding:0.55em 1.0em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+}
+a.button1:hover
+{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+@media all and (max-width:30em)
+{
+    a.button1
+    {
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+/* ---------------------Footer--------------------- */
+.footer {
+    width: 100%;
+    background-color: black;
+    }
+    .footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    }
+    .footer .col h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 10px 0;
+    color: #FF0063;
+    text-transform: uppercase;
+    }
+    .footer .col ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    .footer .col ul li {
+    color: white;
+    font-size: 12px;
+    padding: 5px 0px;
+    }
+    .address ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+    }
+
+    
+    /*--------------------- Modal styles ---------------------*/
+	.modal .modal-dialog {
+		max-width: 400px;
+	}
+	.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+		padding: 20px 30px;
+	}
+	.modal .modal-content {
+		border-radius: 3px;
+	}
+	.modal .modal-footer {
+		background: #ecf0f1;
+		border-radius: 0 0 3px 3px;
+	}
+    .modal .modal-title {
+        display: inline-block;
+    }
+	.modal .form-control {
+		border-radius: 2px;
+		box-shadow: none;
+		border-color: #dddddd;
+	}
+	.modal textarea.form-control {
+		resize: vertical;
+	}
+	.modal .btn {
+		border-radius: 2px;
+		min-width: 100px;
+	}	
+	.modal form label {
+		font-weight: normal;
+	}

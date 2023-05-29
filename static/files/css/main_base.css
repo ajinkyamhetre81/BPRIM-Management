@@ -1,0 +1,75 @@
+h9
+{
+    font-family: Sans-serif; 
+    font-size: 24px;     
+    font-style: normal; 
+    font-weight: bold; 
+    color: Red;
+    text-align: center; 
+    text-decoration: underline
+}
+table
+{
+    font-family: verdana; 
+    color:white; 
+    font-size: 16px; 
+    font-style: normal;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);  
+    border-collapse: collapse; 
+    border: 4px solid #000000;
+    border-style: dashed;
+}
+table.inner
+{
+    border: 10px
+}
+input[type=text], input[type=email], input[type=number]
+{
+    width: 50%;
+    padding: 6px 12px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+input[type=submit], input[type=reset]
+{
+    width: 15%;
+    padding: 8px 12px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+/* ------------------ Footer------------------ */
+.footer {
+    width: 100%;
+    background-color: black;
+  }
+  .footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .footer .col h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 10px 0;
+    color: #FF0063;
+    text-transform: uppercase;
+  }
+  .footer .col ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .footer .col ul li {
+    color: white;
+    font-size: 12px;
+    padding: 5px 0px;
+  }
+  .address ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+  }
